@@ -250,6 +250,9 @@ def main() -> None:
         async with ptb_application:
             await ptb_application.start()
             logger.info(f"Бот запущен на порту {PORT}")
+            webhook_url = f"{RENDER_URL}/webhook"
+            await ptb_application.bot.set_webhook(url=webhook_url)
+            logger.info(f"Webhook установлен: {webhook_url}")
             config = uvicorn.Config(
                 app=starlette_app,
                 host="0.0.0.0",
