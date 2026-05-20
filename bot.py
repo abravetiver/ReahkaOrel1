@@ -45,7 +45,7 @@ from telegram.ext import (
 # ─────────────────────────────────────────────────────────────
 
 TOKEN = os.environ.get("BOT_TOKEN", "")
-RENDER_URL = os.environ.get("RENDER_EXTERNAL_URL", "")
+RENDER_URL = os.environ.get("RENDER_EXTERNAL_URL", "https://reahkaorel1.onrender.com")
 PORT = int(os.environ.get("PORT", 10000))
 
 HEADS = "🦅 Орёл"
